@@ -134,3 +134,8 @@ a.link-card:hover { border-color: var(--accent); transform: translateY(-2px); }
   margin: 0.25rem 0 0; font-family: system-ui, sans-serif; font-size: 0.8rem; color: var(--muted);
 }
 .shelf-notes { font-style: italic; }
+.shelf-reading {
+  display: inline-block; margin: 0.4rem 0 0; padding: 0.1rem 0.55rem; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: system-ui, sans-serif; font-size: 0.75rem; font-weight: 600;
+}

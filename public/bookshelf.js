@@ -1,5 +1,6 @@
 // Bookshelf: reads books from a published Google Sheet (CSV).
 // Sheet columns (row 1): Title | Author | Finished | ISBN | Cover URL | Notes
+// Finished: Y = finished, N = currently reading, or a date like "October 2026".
 // Cover priority: Cover URL -> ISBN (Open Library) -> title/author search (Open Library) -> colored spine.
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJk4pUTzthpTbfHIqMnUEO-0_ixU13bPToNxZg2OIO78lnDRnZcUEIbLZFLjFywsVyff52K6HrTJx1/pub?gid=0&single=true&output=csv";
 
@@ -74,7 +75,6 @@ function setCover(holder, book, i) {
     if (!src) { holder.replaceChildren(spine(book, i)); return; }
     const img = new Image();
     img.alt = `Cover of ${book.title}`;
-    img.loading = "lazy";
     img.onload = () => { if (img.naturalWidth > 1) holder.replaceChildren(img); else tryNext(); };
     img.onerror = tryNext;
     img.src = src;
@@ -94,7 +94,11 @@ function render(books) {
     card.appendChild(cover);
     card.appendChild(el("h3", null, book.title));
     if (book.author) card.appendChild(el("p", "shelf-author", book.author));
-    if (book.finished) card.appendChild(el("p", "shelf-finished", book.finished));
+    // Finished column: Y/Yes = finished (nothing shown), N/No = currently reading,
+    // anything else (e.g. "October 2026") is shown as the finish date.
+    const f = book.finished.toLowerCase();
+    if (["n", "no", "false", "reading"].includes(f)) card.appendChild(el("p", "shelf-reading", "Currently reading"));
+    else if (book.finished && !["y", "yes", "true", "x"].includes(f)) card.appendChild(el("p", "shelf-finished", book.finished));
     if (book.notes) card.appendChild(el("p", "shelf-notes", book.notes));
     shelf.appendChild(card);
   });
