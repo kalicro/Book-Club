@@ -139,3 +139,6 @@ a.link-card:hover { border-color: var(--accent); transform: translateY(-2px); }
   background: var(--accent-soft); color: var(--accent);
   font-family: system-ui, sans-serif; font-size: 0.75rem; font-weight: 600;
 }
+
+/* Links inside page content */
+main a:not(.link-card) { color: var(--accent); }
