@@ -31,13 +31,14 @@
       </div>
     </section>
 
-    <!-- ===== EDIT FOR EACH NEW BOOK / MEETING: quick summary ===== -->
+    <!-- ===== EDIT FOR EACH MEETING: next meeting card (the book card updates itself) ===== -->
     <section>
       <div class="grid">
-        <a class="card link-card" href="current-book.html">
+        <!-- "Now reading" fills in automatically from the Google Sheet (Finished = N) -->
+        <a class="card link-card" id="now-reading" href="current-book.html">
           <span class="label">Now reading</span>
-          <h3>Book Title</h3>
-          <p>by Author Name</p>
+          <h3>Loading…</h3>
+          <p></p>
         </a>
         <a class="card link-card" href="meetings.html">
           <span class="label">Next meeting</span>
@@ -53,6 +54,8 @@
     </section>
   </main>
 
+  <script src="books.js"></script>
+  <script src="current-book.js"></script>
   <footer>Made with love by our book club</footer>
 </body>
 </html>
