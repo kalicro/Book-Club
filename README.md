@@ -2,7 +2,7 @@
 
 All website files live in the `public/` folder.
 
-- `public/index.html` — the page content (current book, meeting, activities)
+- `public/index.html` — the page content (current book, meeting, member corner)
 - `public/style.css` — colors and layout
 
 To update the site: edit `public/index.html`, commit, and push to GitHub.
