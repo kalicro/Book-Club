@@ -1,0 +1,9 @@
+{
+  // Tells Cloudflare where the website files live.
+  // "name" must match the project name you chose in Cloudflare.
+  "name": "book-club",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
