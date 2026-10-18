@@ -102,4 +102,6 @@ a.link-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .link-card h3 { margin: 0 0 0.25rem; }
 .link-card p { margin: 0; color: var(--muted); }
 /* Google Forms embeds */
-.card iframe { display: block; width: 100%; min-height: 700px; border: 0; }
+.card iframe { display: block; width: 100%; min-height: 500px; border: 0; }
+.form-fallback { font-family: system-ui, sans-serif; font-size: 0.9rem; color: var(--muted); margin-bottom: 0; }
+.form-fallback a { color: var(--accent); }
