@@ -25,20 +25,18 @@
   </nav>
 
   <main>
-    <!-- ===== Add a row for each finished book (newest at the top) ===== -->
+    <!-- Books come from the Google Sheet (see SHEET_URL in bookshelf.js).
+         To add a book, add a row to the sheet. No website edit needed. -->
     <section>
       <h2>Bookshelf</h2>
-      <div class="card">
-        <table>
-          <thead><tr><th>Finished</th><th>Book</th><th>Author</th></tr></thead>
-          <tbody>
-            <tr><td>October 2026</td><td>Book Title</td><td>Author Name</td></tr>
-          </tbody>
-        </table>
+      <p class="shelf-intro">Every book we've read together.</p>
+      <div id="shelf" class="shelf" aria-live="polite">
+        <p class="shelf-status">Loading our bookshelf…</p>
       </div>
     </section>
   </main>
 
+  <script src="bookshelf.js"></script>
   <footer>Made with love by our book club</footer>
 </body>
 </html>
