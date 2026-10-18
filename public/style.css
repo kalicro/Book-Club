@@ -142,3 +142,14 @@ a.link-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 
 /* Links inside page content */
 main a:not(.link-card) { color: var(--accent); }
+
+/* Ebook / audiobook links */
+.format-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.shelf-book .format-links { justify-content: center; margin-top: 0.5rem; }
+main a.format-link {
+  display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+  border: 1px solid var(--accent); color: var(--accent); text-decoration: none;
+  font-family: system-ui, sans-serif; font-size: 0.85rem; font-weight: 600;
+}
+.shelf-book a.format-link { padding: 0.2rem 0.55rem; font-size: 0.75rem; }
+main a.format-link:hover { background: var(--accent); color: var(--card); }

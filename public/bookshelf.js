@@ -13,6 +13,8 @@ function renderShelf(books) {
     if (isReading(book)) card.appendChild(el("p", "shelf-reading", "Currently reading"));
     else if (book.finished && !isFinishedFlag(book)) card.appendChild(el("p", "shelf-finished", book.finished));
     if (book.notes) card.appendChild(el("p", "shelf-notes", book.notes));
+    const links = formatLinks(book);
+    if (links) card.appendChild(links);
     shelf.appendChild(card);
   });
 }

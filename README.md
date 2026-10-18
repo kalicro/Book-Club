@@ -6,7 +6,7 @@ All website files live in the `public/` folder.
 - `public/current-book.html`, `meetings.html`, `member-corner.html`, `bookshelf.html` — one page per section
 - The menu is copied on every page; when adding a page, add its link to the menu on all pages
 - `public/style.css` — colors and layout
-- `public/books.js` — reads the published Google Sheet (columns: Title, Author, Finished, ISBN, Cover URL, Notes) and finds covers
+- `public/books.js` — reads the published Google Sheet (columns: Title, Author, Finished, ISBN, Cover URL, Notes, Ebook URL, Audiobook URL) and finds covers
 - `public/bookshelf.js` — Bookshelf page (all books)
 - `public/current-book.js` — Current Book page and Home "Now reading" card (the book marked N in Finished)
 
