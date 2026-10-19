@@ -1,4 +1,4 @@
-# Our Book Club Website
+# Tombstone Book Club Website
 
 All website files live in the `public/` folder.
 
