@@ -217,17 +217,6 @@ th { color: var(--card-red); font-family: var(--type); font-weight: 700; text-tr
   font-family: var(--type); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
 }
 
-/* ---------- Ebook / audiobook links ---------- */
-.format-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-.shelf-book .format-links { justify-content: center; margin-top: 0.5rem; }
-main a.format-link {
-  display: inline-block; padding: 0.3rem 0.75rem; border-radius: 2px;
-  border: 1px solid var(--accent); color: var(--accent); background: var(--paper); text-decoration: none;
-  font-family: var(--type); font-size: 0.85rem; font-weight: 700;
-}
-.shelf-book a.format-link { padding: 0.2rem 0.5rem; font-size: 0.75rem; color: #8a3b2e; border-color: #8a3b2e; }
-main a.format-link:hover { background: #8a3b2e; color: var(--paper); }
-
 /* ---------- Google Forms ---------- */
 .card iframe { display: block; width: 100%; min-height: 500px; border: 0; background: #fff; }
 .form-fallback { font-family: var(--type); font-size: 0.85rem; color: var(--muted); margin-bottom: 0; }
@@ -243,6 +232,5 @@ footer {
   .book { gap: 1rem; }               /* keep cover on the left, info on the right */
   .cover { width: 105px; }
   .book h3 { font-size: 1.2rem; }
-  .book .format-links { gap: 0.4rem; }
   .card { padding: 2rem 1.2rem 2.3rem; }
 }

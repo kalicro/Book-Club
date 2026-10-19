@@ -22,8 +22,6 @@ loadBooks().then(books => {
       info.appendChild(el("h3", null, book.title));
       if (book.author) info.appendChild(el("p", "author", "by " + book.author));
       if (book.notes) info.appendChild(el("p", null, book.notes));
-      const links = formatLinks(book);
-      if (links) info.appendChild(links);
       card.appendChild(cover); card.appendChild(info);
       target.appendChild(card);
     });
