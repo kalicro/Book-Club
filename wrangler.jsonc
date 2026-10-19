@@ -3,7 +3,10 @@
   // "name" must match the project name you chose in Cloudflare.
   "name": "book-club",
   "compatibility_date": "2026-10-01",
+  // Small helper that serves /api/books (the Google Sheet) and /api/cover from our own site.
+  "main": "src/worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS"
   }
 }

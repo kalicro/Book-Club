@@ -1,7 +1,7 @@
 // Bookshelf page: shows every book from the Google Sheet (see books.js).
 function renderShelf(books) {
   const shelf = document.getElementById("shelf");
-  shelf.replaceChildren();
+  setChildren(shelf);
   if (!books.length) { shelf.appendChild(el("p", "shelf-status", "Our shelf is empty for now. Check back soon!")); return; }
   books.forEach((book, i) => {
     const card = el("article", "shelf-book");
@@ -20,6 +20,6 @@ function renderShelf(books) {
 }
 
 loadBooks().then(renderShelf).catch(() => {
-  document.getElementById("shelf").replaceChildren(
+  setChildren(document.getElementById("shelf"), 
     el("p", "shelf-status", "Sorry, the bookshelf couldn't load right now. Please try again later."));
 });

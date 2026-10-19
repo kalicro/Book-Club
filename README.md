@@ -10,5 +10,7 @@ All website files live in the `public/` folder.
 - `public/bookshelf.js` — Bookshelf page (all books)
 - `public/current-book.js` — Current Book page and Home "Now reading" card (the book marked N in Finished)
 
+Book data is loaded through `src/worker.js` (`/api/books` and `/api/cover`), so visitors only talk to this site.
+
 To update the site: edit the page files in `public/`, commit, and push to GitHub.
 Cloudflare rebuilds the site automatically within a minute or two.

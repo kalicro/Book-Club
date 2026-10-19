@@ -6,7 +6,7 @@ loadBooks().then(books => {
   // Current Book page
   const target = document.getElementById("current-book");
   if (target) {
-    target.replaceChildren();
+    setChildren(target);
     if (!reading.length) {
       const card = el("div", "card");
       const p = el("p", null, "We're choosing our next book! Cast your vote in the ");
@@ -43,5 +43,5 @@ loadBooks().then(books => {
   }
 }).catch(() => {
   const target = document.getElementById("current-book");
-  if (target) target.replaceChildren(el("p", "shelf-status", "Sorry, the current book couldn't load right now. Please try again later."));
+  if (target) setChildren(target, el("p", "shelf-status", "Sorry, the current book couldn't load right now. Please try again later."));
 });
